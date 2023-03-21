@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/products', 'ProductController@index');
+Route::get('/items', 'ItemsController@index');

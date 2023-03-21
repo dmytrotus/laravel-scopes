@@ -12,15 +12,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run($count = 1): void
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory($count)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->callWith(ProductsSeeder::class, ['count' => $count]);
-        $this->callWith(GallerySeeder::class, ['count' => $count]);
-        $this->callWith(ProductsGallerySeeder::class, ['count' => $count]);
+        // $this->callWith(ProductsSeeder::class, ['count' => $count]);
+        // $this->callWith(GallerySeeder::class, ['count' => $count]);
+        // $this->callWith(ProductsGallerySeeder::class, ['count' => $count]);
+        $this->callWith(ItemsSeeder::class, ['count' => $count]);
     }
 }
