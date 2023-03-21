@@ -18,7 +18,7 @@ class ProductsGallerySeeder extends Seeder
         for ($i = 1; $i <= $count; $i++) {
             shuffle($arr);
             DB::table('product_galleries')->insert([
-                'product_id' => $count,
+                'product_id' => $i,
                 'images_ids' => json_encode($arr)
             ]);
         }

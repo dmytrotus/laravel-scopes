@@ -10,7 +10,9 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
+        //$products = Product::withMainImage()->get();
 
-        return view('list')->with('products', $products);
+        return view('list')
+        ->with('products', $products);
     }
 }
