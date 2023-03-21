@@ -9,8 +9,8 @@ class ProductController extends Controller
 {
     public function index()
     {
-        //$products = Product::paginate(100);
-        $products = Product::withMainImage()->paginate(100);
+        //$products = Product::take(100)->get();
+        $products = Product::withMainImage()->take(100)->get();
 
         return view('list')
         ->with('products', $products);
