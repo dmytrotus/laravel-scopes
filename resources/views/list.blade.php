@@ -12,6 +12,7 @@
   <div class="container mt-5">
 
     <h4>List of products</h4>
+    {{ $products->links() }}
     <ul class="list-group">
       @foreach($products as $product)
       <li class="list-group-item">
@@ -20,7 +21,6 @@
       </li>
       @endforeach
 
-      {{ $products->links() }}
 
   </ul>
 
