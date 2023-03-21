@@ -1,0 +1,6 @@
+
+
+
+<img src="{{ asset('storage/'.$product->mainImage()->path) }}" width="60" alt="">
+
+<img src="{{ asset('storage/'.$product->main_image) }}" width="60" alt="">

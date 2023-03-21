@@ -16,10 +16,11 @@
       @foreach($products as $product)
       <li class="list-group-item">
         <h5>{{ $product->name }}</h5>
-        <img src="{{ asset('storage/'.$product->mainImage()->path) }}" width="60" alt="">
-        <!-- <img src="{{ asset('storage/'.$product->main_image) }}" width="60" alt=""> -->
+        <img src="{{ asset('storage/'.$product->main_image) }}" width="60" alt="">
       </li>
       @endforeach
+
+      {{ $products->links() }}
 
   </ul>
 
