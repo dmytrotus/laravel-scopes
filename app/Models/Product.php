@@ -26,13 +26,6 @@ class Product extends Model
 
     public function scopeWithMainImage($query)
     {
-        // $query->addSubSelect('main_image', function ($query) {
-        //     $query->select(DB::raw("JSON_EXTRACT(images_ids, '$[0]')"))
-        //     ->from('product_galleries')
-        //     ->whereColumn('product_id', 'products.id')
-        //     ->limit(1);
-        // });
-
         $query->addSubSelect('main_image', function ($query) {
             $query->select('galleries.path')
                 ->from('product_galleries')

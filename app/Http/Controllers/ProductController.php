@@ -12,6 +12,8 @@ class ProductController extends Controller
         //$products = Product::take(100)->get();
         $products = Product::withMainImage()->take(100)->get();
 
+        //dd($products->first());
+
         return view('list')
         ->with('products', $products);
     }
